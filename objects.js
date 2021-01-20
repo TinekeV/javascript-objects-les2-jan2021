@@ -11,16 +11,17 @@ const product = {
 };
 
 // 1a. Log de naam van de serie in de console.
-
+console.log(product.productName);
 
 // 1b. Verander de kleur van het product in "Roze" en log het object in de console
-
+product.color = "Roze"
+console.log(product.color);
 
 // 1c. Log de tweede materiaalsoort ("kunststof") in de console
-
+console.log(product.material[1]);
 
 // 1d. Log de afmetingen (b-h-d) in de console
-
+console.log(product["b-h-d"]);
 
 
 /* Opdracht 2 */
@@ -29,18 +30,36 @@ const product = {
 // ---- Verwachte uitkomst:
 // "De Smeg Waterkoker is gemaakt van roestvrijstaal en kunststof"
 
+function productDescription(productName, material) {
+    return "De " + productName + " is gemaakt van " + material[0] + " en " + material[1]
+}
 
+console.log(productDescription("Smeg Waterkoker", ["roestvrijstaal", "kunststof"]))
 
 /* Opdracht 3 */
 // Maak een object met daarin jouw voornaam (string), achternaam (string),
 // leeftijd (getal) en geboortedatum (date object). De datum hoeft niet geformat te worden.
 // Log dit in de console.
 
+const introducingMe = {
+    firstName: "Tineke",
+    lastName: "Vlieger",
+    myAge: 28,
+    dateOfBirth: new Date('Jan 24, 1992')
+}
 
+console.log(introducingMe)
 
-/* Opdracht */
+/* Opdracht 4 */
 // Schrijf een losstaande functie die bovenstaand object verwacht.
 // De functie geeft een string terug die de leeftijd toelicht
 // ---- Verwachte uitkomsten:
 // { age: 27 } geeft "Jij bent 27 jaar oud."
 // { age: 56 } geeft "Jij bent 56 jaar oud."
+
+function ageWrittenOut(age) {
+    return "Jij bent " + age + " jaar oud."
+}
+
+console.log(ageWrittenOut(27))
+console.log(ageWrittenOut(56))
