@@ -31,7 +31,8 @@ console.log(product["b-h-d"]);
 // "De Smeg Waterkoker is gemaakt van roestvrijstaal en kunststof"
 
 function productDescription(productName, material) {
-    return "De " + productName + " is gemaakt van " + material[0] + " en " + material[1]
+    let description = "De " + productName + " is gemaakt van " + material[0] + " en " + material[1];
+    return description
 }
 
 console.log(productDescription("Smeg Waterkoker", ["roestvrijstaal", "kunststof"]))
@@ -45,10 +46,14 @@ const introducingMe = {
     firstName: "Tineke",
     lastName: "Vlieger",
     myAge: 28,
-    dateOfBirth: new Date('Jan 24, 1992')
+    dateOfBirth: new Date(1992,0,24)
 }
 
 console.log(introducingMe)
+
+const dateOfBirth = new Date (1992, 0, 24)
+const dateOfBirthDutch = dateOfBirth.toLocaleDateString('nl-NL')
+console.log(dateOfBirthDutch)
 
 /* Opdracht 4 */
 // Schrijf een losstaande functie die bovenstaand object verwacht.
@@ -58,7 +63,8 @@ console.log(introducingMe)
 // { age: 56 } geeft "Jij bent 56 jaar oud."
 
 function ageWrittenOut(age) {
-    return "Jij bent " + age + " jaar oud."
+    let ageText = "Jij bent " + age + " jaar oud."
+    return ageText
 }
 
 console.log(ageWrittenOut(27))
